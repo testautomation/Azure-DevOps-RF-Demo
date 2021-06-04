@@ -19,17 +19,6 @@ TC1 - Check Filters on Advanced Searh Page
 
 
 *** Keywords ***
-Open Tests in Souce Labs
-    ${desired_capabilities}=    Create Dictionary
-    Set to Dictionary    ${desired_capabilities}    build    test_run
-    Set to Dictionary    ${desired_capabilities}    platformName    Windows 10
-    Set to Dictionary    ${desired_capabilities}    name    Auto1
-    Set to Dictionary    ${desired_capabilities}    browserName    chrome
-
-    ${executor}=    Evaluate          str('http://milan.novovic:0f772a45-b623-4d44-a01f-9a1db40f0d5d@ondemand.saucelabs.com:80/wd/hub')
-    Create Webdriver    Remote      desired_capabilities=${desired_capabilities}    command_executor=${executor}   
-
-
 Open URL Locally
     #Open Webdriver hosted on Azure Devops
     Create Webdriver    Chrome
